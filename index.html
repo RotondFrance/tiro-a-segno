@@ -6,7 +6,7 @@
     <title>Tiro a segno</title>
 </head>
 <body>
-    <script> src="static/js/p5.min.js" </script>
+    <script src="static/js/p5.min.js" ></script>
     <script>
         let diametro = 400
         function setup(){
@@ -45,7 +45,17 @@
         }
 
         function mouseClicked(){
-            console.log (mouseX)
+            let centroX= width/2
+            let centroY= height/2
+            let distanza=dist(centroX,centroY,mouseX,mouseY)
+            console.log (distanza)
+            if(distanza<=200){
+                alert("dentro")
+            }
+            else{
+                alert("fuori")
+            }
+            
             
         }
     </script>
